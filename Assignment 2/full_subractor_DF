@@ -1,0 +1,8 @@
+module full_subractor_df (
+ input A, B, Cin,
+ output Diff, borr );
+
+assign Diff = A ^ B ^ Cin;
+assign borr = (~A & B) | (~A & Cin) | (B & Cin);
+
+endmodule 
