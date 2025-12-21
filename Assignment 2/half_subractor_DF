@@ -1,0 +1,9 @@
+module half_subractor (
+ input reg [3:0] A, B,
+ output reg [3:0] dif,
+ output reg borr);
+
+assign dif = A ^ B ;
+assign borr = (~A) & B;
+
+endmodule 
