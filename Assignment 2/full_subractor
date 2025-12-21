@@ -1,0 +1,23 @@
+module full_subtractor_be (
+    input wire A, B, Bin,
+    output reg diff, Bout
+);
+
+initial begin
+    $display("Full Subtractor (Behavioral Model)");
+end
+
+always @(*) begin
+    case ({A, B, Bin})
+        3'b000: begin diff = 0; Bout = 0; end
+        3'b001: begin diff = 1; Bout = 1; end
+        3'b010: begin diff = 1; Bout = 1; end
+        3'b011: begin diff = 0; Bout = 1; end
+        3'b100: begin diff = 1; Bout = 0; end
+        3'b101: begin diff = 0; Bout = 0; end
+        3'b110: begin diff = 0; Bout = 0; end
+        3'b111: begin diff = 1; Bout = 1; end
+    endcase
+end
+
+endmodule
