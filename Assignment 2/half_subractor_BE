@@ -1,0 +1,19 @@
+module half_subtractor_be (
+    input wire A, B,
+    output reg diff, borrow
+);
+
+initial begin
+    $display("Designed by Mahasundhari S Half Subtractor Behavioral Mode");
+end
+
+always @(*) begin
+    case ({A, B})
+        2'b00: begin diff = 0; borrow = 0; end
+        2'b01: begin diff = 1; borrow = 1; end
+        2'b10: begin diff = 1; borrow = 0; end
+        2'b11: begin diff = 0; borrow = 0; end
+    endcase
+end
+
+endmodule
