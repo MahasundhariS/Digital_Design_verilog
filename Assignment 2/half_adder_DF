@@ -1,0 +1,9 @@
+module half_adder (
+ input reg [3:0] A, B,
+ output reg [3:0] sum,
+ output reg cout);
+
+assign sum = A ^ B ;
+assign cout = (~A) & B;
+
+endmodule 
