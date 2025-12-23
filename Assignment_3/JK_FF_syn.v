@@ -1,7 +1,7 @@
 module jk_ff_sync(
 input j, k, clk, rst,
 output reg q);
-always @(posedge clk)
+	always @(posedge clk)
 begin
 	if(rst)
 	q=1'b0;
